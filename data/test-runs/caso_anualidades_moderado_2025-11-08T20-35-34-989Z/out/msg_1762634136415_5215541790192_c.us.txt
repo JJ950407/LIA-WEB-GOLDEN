@@ -1,1 +1,0 @@
-🗓️ ¿En qué **mes** vence cada anualidad? (nombre de mes o 1..12). Sugerencia: "diciembre".

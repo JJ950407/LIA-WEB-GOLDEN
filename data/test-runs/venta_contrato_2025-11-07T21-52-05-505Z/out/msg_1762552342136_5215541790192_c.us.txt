@@ -1,7 +1,0 @@
-⚠️ Responde 1 (Contrato), 2 (Pagarés) o 3 (Ambos).
-👋 ¿Qué deseas generar?
-1. Contrato
-2. Pagarés
-3. Ambos
-
-Envía solo el número correspondiente:

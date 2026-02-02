@@ -1,5 +1,0 @@
-📂 Archivos guardados:
-• Carpeta: data/clientes/LUCIA_HERRERA_PINEDA/2025-11-09
-• Lote: data/clientes/LUCIA_HERRERA_PINEDA/2025-11-09/lote/lote_1762717560957.pdf
-• Individuales: data/clientes/LUCIA_HERRERA_PINEDA/2025-11-09/individuales
-• Meta: data/clientes/LUCIA_HERRERA_PINEDA/2025-11-09/meta.json

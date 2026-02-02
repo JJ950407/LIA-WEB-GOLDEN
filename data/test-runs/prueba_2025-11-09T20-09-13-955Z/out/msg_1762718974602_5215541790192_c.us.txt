@@ -1,1 +1,0 @@
-🗓️ Usaré la **fecha de HOY** (09/11/2025) como fecha de emisión. Si necesita otra, escríbala en **dd/mm/aaaa**:

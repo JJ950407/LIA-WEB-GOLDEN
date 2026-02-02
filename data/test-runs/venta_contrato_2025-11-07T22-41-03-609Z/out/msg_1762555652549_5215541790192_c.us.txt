@@ -1,5 +1,0 @@
-📂 Archivos guardados:
-• Carpeta: data/clientes/EL_PELON_BELTRAN_CRIKOSO/2025-11-07
-• Lote: data/clientes/EL_PELON_BELTRAN_CRIKOSO/2025-11-07/lote/lote_1762555292498.pdf
-• Individuales: data/clientes/EL_PELON_BELTRAN_CRIKOSO/2025-11-07/individuales
-• Meta: data/clientes/EL_PELON_BELTRAN_CRIKOSO/2025-11-07/meta.json
