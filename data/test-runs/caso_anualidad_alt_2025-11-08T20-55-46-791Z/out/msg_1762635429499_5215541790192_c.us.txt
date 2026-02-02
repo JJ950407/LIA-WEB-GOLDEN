@@ -1,0 +1,5 @@
+📂 Archivos guardados:
+• Carpeta: data/clientes/ANA_SOFIA_MARTINEZ_DEL_CAMPO_RUIZ/2025-11-08
+• Lote: data/clientes/ANA_SOFIA_MARTINEZ_DEL_CAMPO_RUIZ/2025-11-08/lote/lote_1762635368011.pdf
+• Individuales: data/clientes/ANA_SOFIA_MARTINEZ_DEL_CAMPO_RUIZ/2025-11-08/individuales
+• Meta: data/clientes/ANA_SOFIA_MARTINEZ_DEL_CAMPO_RUIZ/2025-11-08/meta.json

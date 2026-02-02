@@ -1,0 +1,5 @@
+📂 Archivos guardados:
+• Carpeta: data/clientes/ISRAEL_RESENDIZ_RUIZ/2025-11-07
+• Lote: data/clientes/ISRAEL_RESENDIZ_RUIZ/2025-11-07/lote/lote_1762561540826.pdf
+• Individuales: data/clientes/ISRAEL_RESENDIZ_RUIZ/2025-11-07/individuales
+• Meta: data/clientes/ISRAEL_RESENDIZ_RUIZ/2025-11-07/meta.json

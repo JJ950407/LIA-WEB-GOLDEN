@@ -1,0 +1,1 @@
+💎 ¿De cuánto será **cada anualidad**? (ej. 18500). Si no hay, escriba 0.

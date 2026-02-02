@@ -1,0 +1,43 @@
+{
+  "chatId": "5215541790192@c.us",
+  "steps": [
+    { "text": "Menu", "delay": 120 },
+    { "text": "3", "delay": 120 },
+
+    { "text": "250,000", "delay": 120 },
+    { "text": "0", "delay": 120 },
+    { "text": "50,000", "delay": 120 },
+
+    { "text": "no", "delay": 120 },
+
+    { "text": "Jesus Beltran", "delay": 120 },
+    { "text": "María Fernanda López", "delay": 120 },
+    { "text": "Av crikolandia 412 col Narvarte", "delay": 120 },
+    { "text": "Juchitepec Edo Mex c.p. 56860", "delay": 120 },
+    { "text": "Amecameca Edo. Mex.", "delay": 120 },
+    { "text": "sí", "delay": 120 },
+
+    { "text": "hoy", "delay": 120 },
+
+    { "text": "5", "delay": 120 },
+    { "text": "0", "delay": 120 },
+
+    { "text": "1234567890", "delay": 120 },
+    { "text": "Mujer", "delay": 120 },
+    { "text": "Las palmas", "delay": 120 },
+    { "text": "Zoyatzingo Edo Mex", "delay": 120 },
+    { "text": "Amecameca Edo Mex", "delay": 120 },
+    { "text": "Manzana 6 lote 66", "delay": 120 },
+    { "text": "500", "delay": 120 },
+
+    { "text": "18 calle verde", "delay": 120 },
+    { "text": "16 calle azul", "delay": 120 },
+    { "text": "18 calle rosa", "delay": 120 },
+    { "text": "19 calle negro", "delay": 120 },
+
+    { "text": "Tom Cruise/ Naruto Uzumaki", "delay": 120 },
+
+    { "text": "este mes", "delay": 120 },
+    { "text": "confirmar", "delay": 120 }
+  ]
+}

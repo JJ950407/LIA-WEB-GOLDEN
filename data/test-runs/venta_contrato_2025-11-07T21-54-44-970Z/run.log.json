@@ -1,0 +1,176 @@
+[
+  {
+    "ts": "2025-11-07T21:54:44.971Z",
+    "event": "CONTEXT_INIT",
+    "runDir": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z"
+  },
+  {
+    "ts": "2025-11-07T21:54:44.975Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Hola"
+  },
+  {
+    "ts": "2025-11-07T21:54:45.777Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Menu"
+  },
+  {
+    "ts": "2025-11-07T21:54:45.779Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552485779_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:45.934Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Generar contrato"
+  },
+  {
+    "ts": "2025-11-07T21:54:45.935Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552485935_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.140Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "1"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.141Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486141_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.293Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "total: $250,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.294Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486294_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.398Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "enganche: $50,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.399Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486399_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.502Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "mensualidad: $6,500.00"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.707Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486707_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.708Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486708_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.812Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadMonto: $10,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.814Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486813_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.916Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadCount: 2"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.917Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486917_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.971Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadMes: 12"
+  },
+  {
+    "ts": "2025-11-07T21:54:46.972Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552486972_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:47.028Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "cliente: John Wick"
+  },
+  {
+    "ts": "2025-11-07T21:54:47.029Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552487029_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:47.153Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "lote: A-12"
+  },
+  {
+    "ts": "2025-11-07T21:54:47.154Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552487153_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-07T21:54:47.278Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "confirmar"
+  },
+  {
+    "ts": "2025-11-07T21:54:47.279Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-54-44-970Z/out/msg_1762552487279_5215541790192_c.us.txt"
+  }
+]

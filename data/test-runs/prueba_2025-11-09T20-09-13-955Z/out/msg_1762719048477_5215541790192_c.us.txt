@@ -1,0 +1,5 @@
+📂 Archivos guardados:
+• Carpeta: data/clientes/ANA_MARIA_FERNANDEZ_DE_LA_CUEVA/2025-11-09
+• Lote: data/clientes/ANA_MARIA_FERNANDEZ_DE_LA_CUEVA/2025-11-09/lote/lote_1762718976380.pdf
+• Individuales: data/clientes/ANA_MARIA_FERNANDEZ_DE_LA_CUEVA/2025-11-09/individuales
+• Meta: data/clientes/ANA_MARIA_FERNANDEZ_DE_LA_CUEVA/2025-11-09/meta.json

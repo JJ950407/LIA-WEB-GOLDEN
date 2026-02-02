@@ -1,0 +1,45 @@
+{
+  "chatId": "5215541790192@c.us",
+  "steps": [
+    { "text": "Menu", "delay": 100 },
+    { "text": "3", "delay": 100 },
+
+    { "text": "190,000", "delay": 100 },
+    { "text": "20,000", "delay": 100 },
+    { "text": "9,000", "delay": 100 },
+
+    { "text": "sí", "delay": 100 },
+    { "text": "35,000", "delay": 100 },
+    { "text": "1", "delay": 100 },
+    { "text": "12", "delay": 100 },
+
+    { "text": "Jesús Carlos Beltrán", "delay": 100 },
+    { "text": "Lucía Herrera Pineda", "delay": 100 },
+    { "text": "Av. Cedros 450, Col. Jardines, 56910", "delay": 100 },
+    { "text": "Amecameca", "delay": 100 },
+    { "text": "Toluca, MX", "delay": 100 },
+    { "text": "sí", "delay": 100 },
+
+    { "text": "Hoy", "delay": 100 },
+    { "text": "5", "delay": 100 },
+    { "text": "5", "delay": 100 },
+
+    { "text": "5523456789", "delay": 100 },
+    { "text": "Mujer", "delay": 100 },
+
+    { "text": "LOS CEDROS", "delay": 100 },
+    { "text": "Amecameca, Edo. Méx.", "delay": 100 },
+    { "text": "Ayapango, Edo. Méx.", "delay": 100 },
+    { "text": "Manzana 22 lote 14", "delay": 100 },
+    { "text": "500", "delay": 100 },
+
+    { "text": "16 calle norte", "delay": 100 },
+    { "text": "42 calle verde", "delay": 100 },
+    { "text": "58 calle azul", "delay": 100 },
+    { "text": "12 calle amarillo", "delay": 100 },
+
+    { "text": "Carlos Iván Romero / Teresa Aguilar Soto", "delay": 100 },
+    { "text": "mes siguiente", "delay": 100 },
+    { "text": "confirmar", "delay": 100 }
+  ]
+}

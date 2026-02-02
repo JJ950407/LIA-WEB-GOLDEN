@@ -1,0 +1,1 @@
+🔢 ¿Cuántas **anualidades** serán en total? (ej. 8). Si no hay, 0.

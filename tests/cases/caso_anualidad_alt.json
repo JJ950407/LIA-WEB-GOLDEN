@@ -1,0 +1,45 @@
+{
+  "chatId": "5215541790192@c.us",
+  "steps": [
+    { "text": "Menu", "delay": 100 },
+    { "text": "3", "delay": 100 },
+
+    { "text": "200,000", "delay": 100 },
+    { "text": "25,000", "delay": 100 },
+    { "text": "8,500", "delay": 100 },
+
+    { "text": "sí", "delay": 100 },
+    { "text": "30,000", "delay": 100 },
+    { "text": "1", "delay": 100 },
+    { "text": "9", "delay": 100 },
+
+    { "text": "Jesús Beltrán Gómez", "delay": 100 },
+    { "text": "Ana Sofía Martínez del Campo Ruiz", "delay": 100 },
+    { "text": "Av. Horizonte 1234, Col. Miradores, 56789", "delay": 100 },
+    { "text": "Toluca", "delay": 100 },
+    { "text": "Puebla, MX", "delay": 100 },
+    { "text": "sí", "delay": 100 },
+
+    { "text": "Hoy", "delay": 100 },
+    { "text": "5", "delay": 100 },
+    { "text": "5", "delay": 100 },
+
+    { "text": "5539876543", "delay": 100 },
+    { "text": "Mujer", "delay": 100 },
+
+    { "text": "EL ENCINO", "delay": 100 },
+    { "text": "Amecameca, Edo. Méx.", "delay": 100 },
+    { "text": "Ayapango, Edo. Méx.", "delay": 100 },
+    { "text": "Manzana 12 lote 34", "delay": 100 },
+    { "text": "500", "delay": 100 },
+
+    { "text": "18 calle norte", "delay": 100 },
+    { "text": "45 calle verde", "delay": 100 },
+    { "text": "60 calle azul", "delay": 100 },
+    { "text": "20 calle amarillo", "delay": 100 },
+
+    { "text": "José Antonio de la Vega / María Teresa Campos Rivas", "delay": 100 },
+    { "text": "mes siguiente", "delay": 100 },
+    { "text": "confirmar", "delay": 100 }
+  ]
+}

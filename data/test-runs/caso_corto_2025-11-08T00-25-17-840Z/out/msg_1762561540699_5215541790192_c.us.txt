@@ -1,0 +1,23 @@
+📋 *Resumen de venta*
+Total: $250,000.00
+Enganche: $10,000.00
+Saldo: $240,000.00
+Mensualidad: $1,500.00
+Número de pagarés: 160
+Beneficiario: 5
+Deudor: Israel Reséndiz Ruiz
+Dirección: María Fernanda López
+Población: Av crikolandia 412 col Narvarte
+Lugar Expedición: Juchitepec Edo Mex c.p. 56860
+Lugar Pago: Amecameca Edo. Mex.
+Fecha Emisión: 07/11/2025
+Moratorios: 5%
+Interés anual: 5%
+Tipo de documento: ambos
+Teléfono: 1234567890
+
+Comandos:
+• EDITAR – activa modo edición
+• CAMBIAR CAMPO=VALOR – aplica cambio (ej. CAMBIAR MENSUAL=12345.00)
+• APROBAR – generar PDFs definitivos
+• CANCELAR – cancelar borrador

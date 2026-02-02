@@ -1,0 +1,7 @@
+Bienvenido 👋.
+¿Qué deseas generar?
+1. Contrato
+2. Pagarés
+3. Ambos
+
+Envía solo el número correspondiente:

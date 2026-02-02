@@ -1,0 +1,175 @@
+[
+  {
+    "ts": "2025-11-07T21:49:16.330Z",
+    "event": "CONTEXT_INIT",
+    "runDir": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-49-16-296Z"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.369Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Hola"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.375Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 1,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.481Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Menu"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.482Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 2,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.638Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Generar contrato"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.639Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 3,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.840Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "total: $250,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.840Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 4,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.947Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "enganche: $50,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:49:16.947Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 5,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.056Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "mensualidad: $6,500.00"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.057Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 6,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.165Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadMonto: $10,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.165Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 7,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.267Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadCount: 2"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.268Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 8,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.323Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadMes: 12"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.324Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 9,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.394Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "cliente: John Wick"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.394Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 10,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.516Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "lote: A-12"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.516Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 11,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.637Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "confirmar"
+  },
+  {
+    "ts": "2025-11-07T21:49:17.637Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 12,
+    "error": "SyntaxError: Unexpected token ')'",
+    "stack": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1190\n);\n^\n\nSyntaxError: Unexpected token ')'\n    at wrapSafe (node:internal/modules/cjs/loader:1638:18)\n    at Module._compile (node:internal/modules/cjs/loader:1680:20)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\n    at Module.require (node:internal/modules/cjs/loader:1463:12)\n    at require (node:internal/modules/helpers:147:16)\n    at loadAny (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:11:17)"
+  }
+]

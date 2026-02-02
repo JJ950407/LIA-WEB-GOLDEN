@@ -1,0 +1,404 @@
+[
+  {
+    "ts": "2025-11-08T00:36:06.053Z",
+    "event": "CONTEXT_INIT",
+    "runDir": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z"
+  },
+  {
+    "ts": "2025-11-08T00:36:06.104Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Menu"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.245Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183244_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.367Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "3"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.369Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183369_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.494Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "250,000"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.496Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183495_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.618Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "10,000"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.619Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183619_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.742Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "1,500"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.772Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183771_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.773Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183773_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.897Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "no"
+  },
+  {
+    "ts": "2025-11-08T00:36:23.898Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562183898_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.020Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "5"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.020Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184020_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.141Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Israel Reséndiz Ruiz"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.142Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184142_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.268Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "María Fernanda López"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.269Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184269_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.391Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Av crikolandia 412 col Narvarte"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.392Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184392_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.515Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Juchitepec Edo Mex c.p. 56860"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.516Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184516_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.641Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Amecameca Edo. Mex."
+  },
+  {
+    "ts": "2025-11-08T00:36:24.642Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184642_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.767Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "5%"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.768Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184768_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.893Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Hoy"
+  },
+  {
+    "ts": "2025-11-08T00:36:24.895Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562184894_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.034Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "5"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.042Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185042_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.169Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "5"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.170Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185170_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.298Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "1234567890"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.299Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185299_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.425Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Mujer"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.426Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185425_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.548Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Las palmas"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.549Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185549_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.673Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Zoyatzingo Edo Mex"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.674Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185673_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.796Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Amecameca Edo Mex"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.797Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185797_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.920Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Manzana 6 lote 66"
+  },
+  {
+    "ts": "2025-11-08T00:36:25.921Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562185920_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.044Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "500"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.045Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186045_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.166Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "18 calle verde"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.167Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186167_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.288Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "16 calle azul"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.289Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186289_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.412Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "18 calle rosa"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.413Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186413_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.535Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "19 calle negro"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.535Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186535_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.660Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Tom Cruise/ Naruto Uzumaki"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.661Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186660_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.784Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "este mes"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.786Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186786_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.787Z",
+    "level": "info",
+    "msg": "sendText()",
+    "chatId": "5215541790192@c.us",
+    "file": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/caso_corto_2025-11-08T00-36-06-052Z/out/msg_1762562186787_5215541790192_c.us.txt"
+  },
+  {
+    "ts": "2025-11-08T00:36:26.912Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "confirmar"
+  }
+]

@@ -1,0 +1,36 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Datos generados
+data/clientes/*
+!data/clientes/.gitkeep
+data/output/contracts/*
+!data/output/contracts/.gitkeep
+
+# Sesiones de WhatsApp
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno
+.env
+
+# Archivos temporales
+*.tmp
+.DS_Store
+Thumbs.db
+
+# PDFs de prueba
+*.pdf
+!templates/**/*.pdf
+
+# Archivos de fix/debug
+fix-*.js
+patch-*.js
+doctor_lia.sh
+snapshot.zip
+estructura.txt

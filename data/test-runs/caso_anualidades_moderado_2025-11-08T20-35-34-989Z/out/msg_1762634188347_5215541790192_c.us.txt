@@ -1,0 +1,5 @@
+📂 Archivos guardados:
+• Carpeta: data/clientes/MARIA_FERNANDA_LOPEZ_GARCIA/2025-11-08
+• Lote: data/clientes/MARIA_FERNANDA_LOPEZ_GARCIA/2025-11-08/lote/lote_1762634138946.pdf
+• Individuales: data/clientes/MARIA_FERNANDA_LOPEZ_GARCIA/2025-11-08/individuales
+• Meta: data/clientes/MARIA_FERNANDA_LOPEZ_GARCIA/2025-11-08/meta.json

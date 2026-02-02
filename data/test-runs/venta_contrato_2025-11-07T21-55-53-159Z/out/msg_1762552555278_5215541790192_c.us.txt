@@ -1,0 +1,2 @@
+⚠️ Indique un número mayor que 0.
+🔢 ¿Cuántas **anualidades** serán en total? (ej. 8). Si no hay, 0.

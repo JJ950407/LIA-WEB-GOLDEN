@@ -1,0 +1,175 @@
+[
+  {
+    "ts": "2025-11-07T21:26:14.243Z",
+    "event": "CONTEXT_INIT",
+    "runDir": "/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/data/test-runs/venta_contrato_2025-11-07T21-26-14-218Z"
+  },
+  {
+    "ts": "2025-11-07T21:26:14.302Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Hola"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.169Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 1,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.276Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Menu"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.277Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 2,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.438Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "Generar contrato"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.439Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 3,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.653Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "total: $250,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.654Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 4,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.754Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "enganche: $50,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.755Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 5,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.874Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "mensualidad: $6,500.00"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.875Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 6,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.998Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadMonto: $10,000.00"
+  },
+  {
+    "ts": "2025-11-07T21:26:34.999Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 7,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.135Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadCount: 2"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.136Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 8,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.196Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "anualidadMes: 12"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.197Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 9,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.268Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "cliente: John Wick"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.269Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 10,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.393Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "lote: A-12"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.394Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 11,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.553Z",
+    "event": "INCOMING_TEXT",
+    "chatId": "5215541790192@c.us",
+    "text": "confirmar"
+  },
+  {
+    "ts": "2025-11-07T21:26:35.554Z",
+    "level": "error",
+    "msg": "router throw",
+    "step": 12,
+    "error": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js",
+    "stack": "Error: testRouter: no pude cargar src/flows ni src/flows/index.js\n    at testRouter (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/bot.js:1843:13)\n    at invokeReal (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:60:60)\n    at router (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/src/router/index.js:89:10)\n    at async tryInvoke (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:55:5)\n    at async runCase (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:115:23)\n    at async main (/Users/a./Desktop/Copia de proyecto LIA-x 5.1 .2 3/lia-pagare-v4/scripts/smoke.js:149:26)"
+  }
+]

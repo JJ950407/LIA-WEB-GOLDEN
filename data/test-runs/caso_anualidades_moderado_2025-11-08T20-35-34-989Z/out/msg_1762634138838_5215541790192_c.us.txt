@@ -1,0 +1,24 @@
+📋 *Resumen de venta*
+Total: $180,000.00
+Enganche: $20,000.00
+Saldo: $160,000.00
+Mensualidad: $12,000.00
+Número de pagarés: 9
+Anualidad: $40,000.00 x 2 (mes 12)
+Beneficiario: Jesús Beltrán Gómez
+Deudor: María Fernanda López García
+Dirección: Av. Imaginación 999, Col. Del Valle, 56890
+Población: CDMX
+Lugar Expedición: Querétaro, MX
+Lugar Pago: Querétaro, MX
+Fecha Emisión: 08/11/2025
+Moratorios: 5%
+Interés anual: 5%
+Tipo de documento: ambos
+Teléfono: 5512345678
+
+Comandos:
+• EDITAR – activa modo edición
+• CAMBIAR CAMPO=VALOR – aplica cambio (ej. CAMBIAR MENSUAL=12345.00)
+• APROBAR – generar PDFs definitivos
+• CANCELAR – cancelar borrador

@@ -1,0 +1,45 @@
+{
+  "chatId": "5215541790192@c.us",
+  "steps": [
+    { "text": "Menu", "delay": 100 },
+    { "text": "3", "delay": 100 },
+
+    { "text": "200,000", "delay": 100 },
+    { "text": "30,000", "delay": 100 },
+    { "text": "10,000", "delay": 100 },
+
+    { "text": "sí", "delay": 100 },
+    { "text": "50,000", "delay": 100 },
+    { "text": "2", "delay": 100 },
+    { "text": "10", "delay": 100 },
+
+    { "text": "Juan Carlos Pérez González", "delay": 100 },
+    { "text": "Ana María Fernández de la Cueva", "delay": 100 },
+    { "text": "Av. Robles 1234, Col. Centro, 56789", "delay": 100 },
+    { "text": "Ecatepec", "delay": 100 },
+    { "text": "Morelia, MX", "delay": 100 },
+    { "text": "sí", "delay": 100 },
+
+    { "text": "Hoy", "delay": 100 },
+    { "text": "6", "delay": 100 },
+    { "text": "4", "delay": 100 },
+
+    { "text": "5512349999", "delay": 100 },
+    { "text": "Mujer", "delay": 100 },
+
+    { "text": "EL ROBLE", "delay": 100 },
+    { "text": "Morelia, Mich., MX", "delay": 100 },
+    { "text": "Morelia, Mich., MX", "delay": 100 },
+    { "text": "Manzana 10 lote 20", "delay": 100 },
+    { "text": "450", "delay": 100 },
+
+    { "text": "20 calle norte", "delay": 100 },
+    { "text": "30 calle sur", "delay": 100 },
+    { "text": "25 calle oriente", "delay": 100 },
+    { "text": "20 calle poniente", "delay": 100 },
+
+    { "text": "Gerardo Fernando López Ortega / Martina Alejandra Ruiz Cervantes", "delay": 100 },
+    { "text": "mes siguiente", "delay": 100 },
+    { "text": "confirmar", "delay": 100 }
+  ]
+}
