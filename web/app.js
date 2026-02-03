@@ -109,14 +109,18 @@ function validateStep(stepKey) {
     const type = field.dataset.type;
     let message = '';
 
-    if (!value) {
+    if (!value && field.id !== 'enganche') {
       message = 'Este campo es obligatorio.';
     } else if (type === 'date') {
       if (!/^(hoy|\d{1,2}\/\d{1,2}\/\d{4})$/i.test(value)) {
         message = 'Usa "hoy" o dd/mm/aaaa.';
       }
     } else if (type === 'money') {
-      if (parseMoney(value) <= 0) {
+      if (field.id === 'enganche') {
+        if (value && parseMoney(value) < 0) {
+          message = 'Ingresa un monto válido.';
+        }
+      } else if (parseMoney(value) <= 0) {
         message = 'Ingresa un monto válido.';
       }
     } else if (type === 'percent') {
@@ -162,12 +166,13 @@ function buildPayload() {
   const tipoDocumento = getCheckedValue('tipoDocumento');
   const lugarPagoIgual = lugarPagoToggle.checked;
   const lugarExpedicion = getFieldValue('lugarExpedicion');
+  const engancheRaw = getFieldValue('enganche');
 
   return {
     tipoDocumento,
     fechaEmision: getFieldValue('fechaEmision'),
     total: parseMoney(getFieldValue('total')),
-    enganche: parseMoney(getFieldValue('enganche')),
+    enganche: engancheRaw ? engancheRaw : '0',
     mensual: parseMoney(getFieldValue('mensual')),
     _tieneAnualidades: anualidades === 'si',
     anualidadMonto: anualidades === 'si' ? parseMoney(getFieldValue('anualidadMonto')) : 0,
@@ -201,7 +206,8 @@ function buildPayload() {
 }
 
 function renderSummary(payload) {
-  const saldo = Number(payload.total) - Number(payload.enganche);
+  const engancheValue = parseMoney(payload.enganche);
+  const saldo = Number(payload.total) - engancheValue;
   const anualTotal = Number(payload.anualidadMonto) * Number(payload.numeroAnualidades || 0);
   const numeroPagares = payload.mensual ? Math.ceil((saldo - anualTotal) / payload.mensual) : 0;
 
@@ -210,7 +216,7 @@ function renderSummary(payload) {
     `• Documentos: ${payload.tipoDocumento}`,
     `• Fecha de emisión: ${payload.fechaEmision}`,
     `• Total: $${formatCurrency(payload.total)}`,
-    `• Enganche: $${formatCurrency(payload.enganche)}`,
+    `• Enganche: $${formatCurrency(engancheValue)}`,
     `• Saldo: $${formatCurrency(saldo)}`,
     `• Mensualidad: $${formatCurrency(payload.mensual)}`,
     payload._tieneAnualidades

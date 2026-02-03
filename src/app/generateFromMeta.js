@@ -40,7 +40,11 @@ function normalizePayload(raw) {
   const tipoDocumento = raw.tipoDocumento || raw.documento || raw.docs || 'ambos';
   const fechaEmision = parseFecha(raw.fechaEmision || raw.fechaEmisionLote || raw.fecha);
   const total = toNumber(raw.total ?? raw.montoTotalVenta, parseMoneyLoose);
-  const enganche = toNumber(raw.enganche, parseMoneyLoose);
+  const engancheRaw = raw.enganche;
+  const engancheSafe = (engancheRaw === undefined || engancheRaw === null || String(engancheRaw).trim() === '')
+    ? '0'
+    : engancheRaw;
+  const enganche = toNumber(engancheSafe, parseMoneyLoose);
   const mensual = toNumber(raw.mensual ?? raw.mensualidad, parseMoneyLoose);
   const anualidadMonto = toNumber(raw.anualidadMonto ?? raw.anualidadMontoValor, parseMoneyLoose);
   const numeroAnualidades = Math.round(
