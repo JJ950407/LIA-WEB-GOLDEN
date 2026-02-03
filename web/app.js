@@ -25,9 +25,26 @@ const summaryVenta = document.getElementById('summary-venta');
 const summaryCliente = document.getElementById('summary-cliente');
 const summaryPredio = document.getElementById('summary-predio');
 const editPredioButton = document.querySelector('[data-edit="predio"]');
+const loadingOverlay = document.getElementById('loading-overlay');
+const loadingText = document.getElementById('loading-text');
 
 let stepOrder = ['docs', 'venta', 'cliente', 'predio', 'resumen'];
 let currentIndex = 0;
+
+function showLoading(message) {
+  if (loadingText && message) {
+    loadingText.textContent = message;
+  }
+  if (loadingOverlay) {
+    loadingOverlay.classList.remove('hidden');
+  }
+}
+
+function hideLoading() {
+  if (loadingOverlay) {
+    loadingOverlay.classList.add('hidden');
+  }
+}
 
 function formatCurrency(value) {
   const number = Number(value || 0);
@@ -329,28 +346,33 @@ submitButton.addEventListener('click', async () => {
     }
 
     statusText.textContent = 'Generando documentos...';
-    const generateRes = await fetch('/api/generar', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ basePath: captureData.basePath, docs: payload.tipoDocumento })
-    });
+    showLoading('Generando documentos…');
+    try {
+      const generateRes = await fetch('/api/generar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ basePath: captureData.basePath, docs: payload.tipoDocumento })
+      });
 
-    const generateData = await generateRes.json();
-    if (!generateData.ok) {
-      throw new Error(generateData.error || 'Error al generar documentos');
+      const generateData = await generateRes.json();
+      if (!generateData.ok) {
+        throw new Error(generateData.error || 'Error al generar documentos');
+      }
+
+      statusText.textContent = 'Documentos listos para descarga.';
+      const { contratoPdfUrl, pagaresPdfUrl } = generateData.outputs || {};
+
+      downloadContrato.classList.toggle('hidden', !contratoPdfUrl);
+      downloadPagares.classList.toggle('hidden', !pagaresPdfUrl);
+      printPagares.classList.toggle('hidden', !pagaresPdfUrl);
+
+      if (contratoPdfUrl) downloadContrato.href = contratoPdfUrl;
+      if (pagaresPdfUrl) downloadPagares.href = pagaresPdfUrl;
+
+      resultsSection.classList.remove('hidden');
+    } finally {
+      hideLoading();
     }
-
-    statusText.textContent = 'Documentos listos para descarga.';
-    const { contratoPdfUrl, pagaresPdfUrl } = generateData.outputs || {};
-
-    downloadContrato.classList.toggle('hidden', !contratoPdfUrl);
-    downloadPagares.classList.toggle('hidden', !pagaresPdfUrl);
-    printPagares.classList.toggle('hidden', !pagaresPdfUrl);
-
-    if (contratoPdfUrl) downloadContrato.href = contratoPdfUrl;
-    if (pagaresPdfUrl) downloadPagares.href = pagaresPdfUrl;
-
-    resultsSection.classList.remove('hidden');
   } catch (error) {
     statusText.textContent = error.message;
   } finally {
