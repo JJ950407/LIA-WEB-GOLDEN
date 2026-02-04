@@ -10,11 +10,15 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const BASE_CLIENTS_DIR = path.resolve(__dirname, 'data', 'clientes');
+const ENABLE_AUTH = String(process.env.ENABLE_AUTH || '0') === '1';
+const AUTH_USER = process.env.AUTH_USER;
+const AUTH_PASS = process.env.AUTH_PASS;
+const AUTH_REALM = process.env.AUTH_REALM || 'LIA Pagaré';
 
 app.use(express.json({ limit: '1mb' }));
 
 function unauthorized(res) {
-  res.setHeader('WWW-Authenticate', 'Basic realm="LIA Pagaré"');
+  res.setHeader('WWW-Authenticate', `Basic realm="${AUTH_REALM}"`);
   return res.status(401).send('Autenticación requerida.');
 }
 
@@ -29,13 +33,18 @@ function basicAuth(req, res, next) {
   if (!user || !pass) {
     return unauthorized(res);
   }
-  if (user !== process.env.APP_USER || pass !== process.env.APP_PASS) {
+  if (user !== AUTH_USER || pass !== AUTH_PASS) {
     return unauthorized(res);
   }
   return next();
 }
 
-app.use(basicAuth);
+if (ENABLE_AUTH) {
+  if (!AUTH_USER || !AUTH_PASS) {
+    throw new Error('ENABLE_AUTH=1 requiere AUTH_USER y AUTH_PASS.');
+  }
+  app.use(basicAuth);
+}
 app.use(express.static(path.join(__dirname, 'web')));
 
 function slugifyWeb(text) {
