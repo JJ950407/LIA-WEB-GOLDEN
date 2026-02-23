@@ -80,6 +80,9 @@ function showStep(index) {
   const stepNumber = currentIndex + 1;
   progressLabel.textContent = `Paso ${stepNumber} de ${stepOrder.length}`;
   progressBar.style.width = `${(stepNumber / stepOrder.length) * 100}%`;
+  
+  // Actualizar sidebar visual
+  updateSidebar();
 }
 
 function setError(input, message) {
@@ -216,50 +219,63 @@ function renderSummary(payload) {
   const anualTotal = Number(payload.anualidadMonto) * Number(payload.numeroAnualidades || 0);
   const numeroPagares = payload.mensual ? Math.ceil((saldo - anualTotal) / payload.mensual) : 0;
 
+  // Mapeo de emojis por tipo de campo
+  const getEmoji = (text) => {
+    const lower = String(text).toLowerCase();
+    if (lower.includes('total') || lower.includes('enganche') || lower.includes('mensualidad') || lower.includes('saldo') || lower.includes('monto')) return '💰';
+    if (lower.includes('fecha') || lower.includes('número de pagarés') || lower.includes('numero de pagares')) return '📅';
+    if (lower.includes('beneficiario') || lower.includes('vendedor') || lower.includes('deudor') || lower.includes('género') || lower.includes('genero')) return '👤';
+    if (lower.includes('domicilio') || lower.includes('lugar') || lower.includes('dirección') || lower.includes('direccion') || lower.includes('población') || lower.includes('poblacion')) return '🏠';
+    if (lower.includes('teléfono') || lower.includes('telefono')) return '📞';
+    if (lower.includes('regla') || lower.includes('moratorios') || lower.includes('moratorio') || lower.includes('interés') || lower.includes('interes')) return '⚖️';
+    if (lower.includes('documentos') || lower.includes('anualidades') || lower.includes('anualidad')) return '📋';
+    return '•';
+  };
+
   summaryVenta.textContent = [
-    '🧾 Venta y pagos',
-    `• Documentos: ${payload.tipoDocumento}`,
-    `• Fecha de emisión: ${payload.fechaEmision}`,
-    `• Total: $${formatCurrency(payload.total)}`,
-    `• Enganche: $${formatCurrency(engancheValue)}`,
-    `• Saldo: $${formatCurrency(saldo)}`,
-    `• Mensualidad: $${formatCurrency(payload.mensual)}`,
+    '📋 Venta y pagos',
+    `${getEmoji('Documentos')} Documentos: ${payload.tipoDocumento}`,
+    `${getEmoji('Fecha')} Fecha de emisión: ${payload.fechaEmision}`,
+    `${getEmoji('Total')} Total: $${formatCurrency(payload.total)}`,
+    `${getEmoji('Enganche')} Enganche: $${formatCurrency(engancheValue)}`,
+    `${getEmoji('Saldo')} Saldo: $${formatCurrency(saldo)}`,
+    `${getEmoji('Mensualidad')} Mensualidad: $${formatCurrency(payload.mensual)}`,
     payload._tieneAnualidades
-      ? `• Anualidades: $${formatCurrency(payload.anualidadMonto)} x ${payload.numeroAnualidades} (mes ${payload.anualidadMes})`
-      : '• Anualidades: No',
-    `• Número de pagarés: ${numeroPagares}`,
-    `• Regla 15/30: ${payload.reglaPref === 'siguiente' ? 'siguiente mes' : 'este mes'}`,
-    `• Moratorios: ${payload.moratorios}%`,
-    `• Interés anual: ${payload.interes}%`
+      ? `${getEmoji('Anualidades')} Anualidades: $${formatCurrency(payload.anualidadMonto)} x ${payload.numeroAnualidades} (mes ${payload.anualidadMes})`
+      : `${getEmoji('Anualidades')} Anualidades: No`,
+    `${getEmoji('Número de pagarés')} Número de pagarés: ${numeroPagares}`,
+    `${getEmoji('Regla')} Regla 15/30: ${payload.reglaPref === 'siguiente' ? 'siguiente mes' : 'este mes'}`,
+    `${getEmoji('Moratorios')} Moratorios: ${payload.moratorios}%`,
+    `${getEmoji('Interés')} Interés anual: ${payload.interes}%`
   ].join('\n');
 
   summaryCliente.textContent = [
     '👥 Cliente y deudor',
-    `• Beneficiario: ${payload.beneficiario}`,
-    `• Vendedor: ${payload.vendedorNombre}`,
-    `• Domicilio vendedor: ${payload.vendedorDomicilio}`,
-    `• Deudor: ${payload.deudor}`,
-    `• Género: ${payload.deudorGenero}`,
-    `• Dirección: ${payload.direccion}`,
-    `• Población: ${payload.poblacion}`,
-    `• Lugar expedición: ${payload.lugarExpedicion}`,
-    `• Lugar pago: ${payload.lugarPago}`,
-    `• Teléfono: ${payload.telefono}`
+    `${getEmoji('Beneficiario')} Beneficiario: ${payload.beneficiario}`,
+    `${getEmoji('Vendedor')} Vendedor: ${payload.vendedorNombre}`,
+    `${getEmoji('Domicilio')} Domicilio vendedor: ${payload.vendedorDomicilio}`,
+    `${getEmoji('Deudor')} Deudor: ${payload.deudor}`,
+    `${getEmoji('Género')} Género: ${payload.deudorGenero}`,
+    `${getEmoji('Dirección')} Dirección: ${payload.direccion}`,
+    `${getEmoji('Población')} Población: ${payload.poblacion}`,
+    `${getEmoji('Lugar')} Lugar expedición: ${payload.lugarExpedicion}`,
+    `${getEmoji('Lugar')} Lugar pago: ${payload.lugarPago}`,
+    `${getEmoji('Teléfono')} Teléfono: ${payload.telefono}`
   ].join('\n');
 
   if (stepOrder.includes('predio')) {
     summaryPredio.textContent = [
       '🏡 Predio y testigos',
-      `• Predio: ${payload.predioNombre}`,
-      `• Ubicación: ${payload.predioUbicacion}`,
-      `• Municipio: ${payload.predioMunicipio}`,
-      `• Manzana/Lote: ${payload.predioManzanaLote}`,
-      `• Superficie: ${payload.predioSuperficie}`,
-      `• Norte: ${payload.linderoNorte}`,
-      `• Sur: ${payload.linderoSur}`,
-      `• Oriente: ${payload.linderoOriente}`,
-      `• Poniente: ${payload.linderoPoniente}`,
-      `• Testigos: ${payload.testigos}`
+      `🏡 Predio: ${payload.predioNombre}`,
+      `📍 Ubicación: ${payload.predioUbicacion}`,
+      `🏛️ Municipio: ${payload.predioMunicipio}`,
+      `🔢 Manzana/Lote: ${payload.predioManzanaLote}`,
+      `📐 Superficie: ${payload.predioSuperficie}`,
+      `🧭 Norte: ${payload.linderoNorte}`,
+      `🧭 Sur: ${payload.linderoSur}`,
+      `🧭 Oriente: ${payload.linderoOriente}`,
+      `🧭 Poniente: ${payload.linderoPoniente}`,
+      `👥 Testigos: ${payload.testigos}`
     ].join('\n');
     summaryPredio.classList.remove('hidden');
     if (editPredioButton) editPredioButton.classList.remove('hidden');
@@ -312,16 +328,107 @@ document.querySelectorAll('[data-edit]').forEach((button) => {
   });
 });
 
-submitButton.addEventListener('click', async () => {
+// ============================================================================
+// BOTÓN NUEVO CONTRATO - RESET WIZARD
+// ============================================================================
+
+const btnNewContract = document.getElementById('btn-new-contract');
+
+function resetWizard() {
+  if (!confirm('¿Iniciar nuevo contrato? Los datos actuales se perderán.')) {
+    return;
+  }
+  
+  // Limpiar todos los inputs
+  document.querySelectorAll('input, select, textarea').forEach(el => {
+    if (el.type === 'radio' || el.type === 'checkbox') {
+      el.checked = false;
+    } else {
+      el.value = '';
+    }
+    // Limpiar errores
+    const errorEl = el.closest('.field, .options')?.querySelector('.error');
+    if (errorEl) errorEl.textContent = '';
+  });
+  
+  // Resetear paso de lugar de pago (checkbox default)
+  if (lugarPagoToggle) lugarPagoToggle.checked = true;
+  
+  // Ocultar secciones condicionales
+  if (anualidadesFields) anualidadesFields.classList.add('hidden');
+  if (lugarPagoContainer) lugarPagoContainer.classList.add('hidden');
+  
+  // Resetear orden de pasos
+  stepOrder = ['docs', 'venta', 'cliente', 'predio', 'resumen'];
+  
+  // Ocultar resultados
+  resultsSection.classList.add('hidden');
+  
+  // Limpiar status
+  statusText.textContent = '';
+  
+  // Volver al paso 1
+  showStep(0);
+  renderSummary(buildPayload());
+  
+  // Scroll al inicio
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+if (btnNewContract) {
+  btnNewContract.addEventListener('click', resetWizard);
+}
+
+// ============================================================================
+// OVERLAY DE PROGRESO DE GENERACIÓN
+// ============================================================================
+
+const generationOverlay = document.getElementById('generationOverlay');
+const generationProgressFill = document.getElementById('generationProgressFill');
+const progressText = document.getElementById('progressText');
+const progressPercent = document.getElementById('progressPercent');
+
+function showGenerationProgress() {
+  if (generationOverlay) {
+    generationOverlay.classList.add('active');
+    updateGenerationProgress(0, 'Iniciando...');
+  }
+}
+
+function hideGenerationProgress() {
+  if (generationOverlay) {
+    generationOverlay.classList.remove('active');
+  }
+}
+
+function updateGenerationProgress(percent, text) {
+  if (generationProgressFill) {
+    generationProgressFill.style.width = `${percent}%`;
+  }
+  if (progressText) {
+    progressText.textContent = text;
+  }
+  if (progressPercent) {
+    progressPercent.textContent = `${Math.round(percent)}%`;
+  }
+}
+
+async function generateDocumentsWithProgress() {
   clearStatus();
   const payload = buildPayload();
   const allValid = stepOrder.every((stepKey) => validateStep(stepKey));
   if (!allValid) return;
 
   submitButton.disabled = true;
-  statusText.textContent = 'Enviando captura...';
-
+  showGenerationProgress();
+  
   try {
+    // Paso 1: Enviando datos (0-20%)
+    updateGenerationProgress(10, 'Enviando datos...');
+    await new Promise(r => setTimeout(r, 400));
+    
+    updateGenerationProgress(20, 'Validando información...');
+    
     const captureRes = await fetch('/api/capturas', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -333,67 +440,66 @@ submitButton.addEventListener('click', async () => {
       throw new Error(captureData.error || 'Error al guardar la captura');
     }
 
-    statusText.textContent = 'Generando documentos...';
-    if (window.LIA_LOADER) {
-      window.LIA_LOADER.showLoader();
-      window.LIA_LOADER.setStep('Generando documentos…');
-      window.LIA_LOADER.setPct(10);
+    // Paso 2: Generando documentos (20-80%)
+    const docsType = payload.tipoDocumento;
+    let progressStart = 30;
+    
+    if (docsType === 'contrato' || docsType === 'ambos') {
+      updateGenerationProgress(progressStart, 'Generando contrato...');
+      await new Promise(r => setTimeout(r, 800));
+      progressStart += 25;
+    }
+    
+    if (docsType === 'pagares' || docsType === 'ambos') {
+      updateGenerationProgress(progressStart, 'Generando pagarés...');
+      await new Promise(r => setTimeout(r, 800));
+      progressStart += 25;
+    }
+    
+    updateGenerationProgress(Math.min(progressStart, 70), 'Procesando documentos...');
+    
+    const generateRes = await fetch('/api/generar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ basePath: captureData.basePath, docs: docsType })
+    });
+
+    const generateData = await generateRes.json();
+    if (!generateData.ok) {
+      throw new Error(generateData.error || 'Error al generar documentos');
     }
 
-    let softPct = 10;
-    let softTimer = null;
-    if (window.LIA_LOADER) {
-      softTimer = setInterval(() => {
-        if (softPct < 95) {
-          softPct += 3;
-          window.LIA_LOADER.setPct(softPct);
-        }
-      }, 350);
-    }
+    // Paso 3: Finalizando (80-100%)
+    updateGenerationProgress(85, 'Finalizando...');
+    await new Promise(r => setTimeout(r, 400));
+    
+    updateGenerationProgress(100, '¡Documentos listos!');
+    await new Promise(r => setTimeout(r, 600));
 
-    try {
-      const generateRes = await fetch('/api/generar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ basePath: captureData.basePath, docs: payload.tipoDocumento })
-      });
+    // Mostrar resultados
+    const { contratoPdfUrl, pagaresPdfUrl } = generateData.outputs || {};
 
-      const generateData = await generateRes.json();
-      if (!generateData.ok) {
-        throw new Error(generateData.error || 'Error al generar documentos');
-      }
+    downloadContrato.classList.toggle('hidden', !contratoPdfUrl);
+    downloadPagares.classList.toggle('hidden', !pagaresPdfUrl);
+    printPagares.classList.toggle('hidden', !pagaresPdfUrl);
 
-      statusText.textContent = 'Documentos listos para descarga.';
-      const { contratoPdfUrl, pagaresPdfUrl } = generateData.outputs || {};
+    if (contratoPdfUrl) downloadContrato.href = contratoPdfUrl;
+    if (pagaresPdfUrl) downloadPagares.href = pagaresPdfUrl;
 
-      downloadContrato.classList.toggle('hidden', !contratoPdfUrl);
-      downloadPagares.classList.toggle('hidden', !pagaresPdfUrl);
-      printPagares.classList.toggle('hidden', !pagaresPdfUrl);
+    resultsSection.classList.remove('hidden');
+    statusText.textContent = 'Documentos listos para descarga.';
+    
+    hideGenerationProgress();
 
-      if (contratoPdfUrl) downloadContrato.href = contratoPdfUrl;
-      if (pagaresPdfUrl) downloadPagares.href = pagaresPdfUrl;
-
-      resultsSection.classList.remove('hidden');
-
-      if (window.LIA_LOADER) {
-        window.LIA_LOADER.setStep('Finalizando…');
-        window.LIA_LOADER.setPct(100);
-      }
-    } finally {
-      if (softTimer) clearInterval(softTimer);
-      if (window.LIA_LOADER) {
-        setTimeout(() => window.LIA_LOADER.hideLoader(), 200);
-      }
-    }
   } catch (error) {
-    if (window.LIA_LOADER) {
-      window.LIA_LOADER.hideLoader();
-    }
+    hideGenerationProgress();
     statusText.textContent = error.message;
   } finally {
     submitButton.disabled = false;
   }
-});
+}
+
+submitButton.addEventListener('click', generateDocumentsWithProgress);
 
 printPagares.addEventListener('click', () => {
   if (!downloadPagares.href || downloadPagares.href === '#') return;
@@ -404,6 +510,98 @@ printPagares.addEventListener('click', () => {
     printWindow.print();
   });
 });
+
+// ============================================================================
+// SIDEBAR Y NAVEGACIÓN
+// ============================================================================
+
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+const menuToggle = document.getElementById('menu-toggle');
+const stepItems = document.querySelectorAll('.step-item');
+const currentStepNum = document.getElementById('current-step-num');
+const totalStepsEl = document.getElementById('total-steps');
+const stepProgressFill = document.getElementById('step-progress-fill');
+
+// Toggle sidebar en mobile
+function toggleSidebar() {
+  sidebar.classList.toggle('open');
+  sidebarOverlay.classList.toggle('active');
+}
+
+function closeSidebar() {
+  sidebar.classList.remove('open');
+  sidebarOverlay.classList.remove('active');
+}
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', toggleSidebar);
+}
+
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener('click', closeSidebar);
+}
+
+// Función para actualizar indicador de pasos visuales
+function updateStepIndicator(currentStep) {
+  stepItems.forEach((item, index) => {
+    item.classList.remove('active', 'completed');
+    if (index + 1 === currentStep) {
+      item.classList.add('active');
+    } else if (index + 1 < currentStep) {
+      item.classList.add('completed');
+    }
+  });
+}
+
+// Actualizar sidebar según el paso actual
+function updateSidebar() {
+  const currentStepKey = stepOrder[currentIndex];
+  const currentStepNumber = currentIndex + 1;
+  
+  // Actualizar números en el header
+  if (currentStepNum) currentStepNum.textContent = currentStepNumber;
+  if (totalStepsEl) totalStepsEl.textContent = stepOrder.length;
+  if (stepProgressFill) {
+    stepProgressFill.style.width = `${(currentStepNumber / stepOrder.length) * 100}%`;
+  }
+  
+  // Actualizar indicadores visuales
+  updateStepIndicator(currentStepNumber);
+  
+  // Ocultar predio si no aplica
+  stepItems.forEach(item => {
+    const stepId = item.dataset.stepId;
+    if (stepId === 'predio' && !stepOrder.includes('predio')) {
+      item.style.display = 'none';
+    } else {
+      item.style.display = '';
+    }
+  });
+}
+
+// Click en items del sidebar
+stepItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const stepId = item.dataset.stepId;
+    const targetIndex = stepOrder.indexOf(stepId);
+    
+    if (targetIndex !== -1) {
+      // Validar pasos anteriores si avanzamos
+      if (targetIndex > currentIndex) {
+        for (let i = currentIndex; i < targetIndex; i++) {
+          if (!validateStep(stepOrder[i])) return;
+        }
+      }
+      
+      showStep(targetIndex);
+      renderSummary(buildPayload());
+      closeSidebar();
+    }
+  });
+});
+
+// Sidebar ya se actualiza en showStep()
 
 /**
  * Inicializa la aplicación después de verificar autenticación

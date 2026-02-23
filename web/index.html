@@ -7,29 +7,71 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="app">
-    <header class="topbar">
-      <div class="brand">
-        <img src="assets/adein-logo.png" alt="ADEIN" class="brand__logo" />
-        <div class="brand__text">
-          <h1>LIA Pagaré Web</h1>
-          <p>Gestión inmobiliaria • Documentos seguros</p>
+  <!-- Sidebar -->
+  <aside class="wizard-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-label">ASISTENTE</span>
+    </div>
+    <nav class="wizard-steps">
+      <div class="step-item active" data-step="1" data-step-id="docs">
+        <span class="step-number">01</span>
+        <span class="step-name">Documentos</span>
+      </div>
+      <div class="step-item" data-step="2" data-step-id="venta">
+        <span class="step-number">02</span>
+        <span class="step-name">Venta y pagos</span>
+      </div>
+      <div class="step-item" data-step="3" data-step-id="cliente">
+        <span class="step-number">03</span>
+        <span class="step-name">Cliente y deudor</span>
+      </div>
+      <div class="step-item" data-step="4" data-step-id="predio">
+        <span class="step-number">04</span>
+        <span class="step-name">Predio y testigos</span>
+      </div>
+      <div class="step-item" data-step="5" data-step-id="resumen">
+        <span class="step-number">05</span>
+        <span class="step-name">Resumen final</span>
+      </div>
+    </nav>
+  </aside>
+  
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header -->
+    <header class="top-header">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header-logo-container">
+        <img src="assets/adein.png" class="header-logo" alt="ADEIN">
+      </div>
+      <button type="button" class="logout-btn" id="logout-button">Cerrar sesión</button>
+    </header>
+    
+    <!-- Fondo animado sutil -->
+    <div class="main-background">
+      <div class="bg-grid"></div>
+    </div>
+    
+    <!-- Wizard Container -->
+    <div class="wizard-container">
+      <!-- Step Header -->
+      <div class="step-header">
+        <span class="step-label">ASISTENTE</span>
+        <h1>Paso <span id="current-step-num">1</span> de <span id="total-steps">5</span></h1>
+        <div class="step-progress-bar">
+          <div class="step-progress-fill" id="step-progress-fill" style="width: 20%"></div>
         </div>
       </div>
-      <button type="button" class="logout-button" id="logout-button" title="Cerrar sesión">
-        Cerrar sesión
-      </button>
-    </header>
-
-    <main>
-      <section class="progress">
-        <div class="progress__label" id="progress-label">Paso 1 de 5</div>
-        <div class="progress__bar">
-          <span id="progress-bar"></span>
-        </div>
-      </section>
-
-      <div class="wizard-card">
+      
+      <!-- Wizard Card -->
+      <div class="wizard-card glass-effect">
         <form id="wizard" novalidate>
           <section class="step" id="step-docs" data-step="docs">
             <div class="card">
@@ -293,6 +335,7 @@
               <button type="button" class="link" data-edit="predio">Editar predio y testigos</button>
 
               <button type="button" class="primary" id="submit">Aprobar y generar documentos</button>
+              <button type="button" class="btn-new-contract" id="btn-new-contract">+ Nuevo contrato</button>
               <p class="status" id="status"></p>
             </div>
           </section>
@@ -314,7 +357,21 @@
           </div>
         </div>
       </section>
-    </main>
+    </div>
+  </main>
+
+  <!-- Overlay de progreso de generación -->
+  <div id="generationOverlay" class="progress-overlay" aria-hidden="true">
+    <div class="progress-card">
+      <div class="progress-icon">📄</div>
+      <h3>Generando documentos</h3>
+      <p class="progress-text" id="progressText">Iniciando...</p>
+      <div class="progress-bar-container">
+        <div class="progress-fill" id="generationProgressFill"></div>
+      </div>
+      <p class="progress-percent" id="progressPercent">0%</p>
+      <p class="progress-hint">No cierres esta ventana</p>
+    </div>
   </div>
 
   <div id="liaLoaderOverlay" aria-hidden="true">
