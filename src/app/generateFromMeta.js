@@ -141,9 +141,16 @@ async function ensureAuditJson(basePath, meta, outputs, docs) {
 }
 
 async function generateFromMeta({ basePath, docs }) {
+  console.log('[DEBUG generateFromMeta] Iniciando...');
+  console.log('[DEBUG generateFromMeta] basePath:', basePath);
+  console.log('[DEBUG generateFromMeta] docs:', docs);
+  
   if (!basePath) throw new Error('basePath requerido');
 
   const metaPath = path.join(basePath, 'meta.json');
+  console.log('[DEBUG generateFromMeta] metaPath:', metaPath);
+  console.log('[DEBUG generateFromMeta] metaPath existe:', fs.existsSync(metaPath));
+  
   if (!fs.existsSync(metaPath)) throw new Error('meta.json no encontrado');
 
   const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -153,38 +160,74 @@ async function generateFromMeta({ basePath, docs }) {
   const outputs = {};
   let pagaresBaseDir = null;
 
-  if (docs === 'pagares' || docs === 'ambos') {
-    const { baseDir, lotePath } = await generarLoteYMeta({ ...data });
-    pagaresBaseDir = baseDir;
-    if (path.resolve(baseDir) !== path.resolve(basePath)) {
-      await copyDirSkippingMeta(baseDir, basePath);
-      await fse.remove(baseDir);
+  try {
+    if (docs === 'pagares' || docs === 'ambos') {
+      console.log('[DEBUG generateFromMeta] Generando pagarés...');
+      const { baseDir, lotePath } = await generarLoteYMeta({ ...data });
+      console.log('[DEBUG generateFromMeta] baseDir generado:', baseDir);
+      console.log('[DEBUG generateFromMeta] lotePath:', lotePath);
+      pagaresBaseDir = baseDir;
+      const resolvedBaseDir = path.resolve(baseDir);
+      const resolvedBasePath = path.resolve(basePath);
+      console.log('[DEBUG generateFromMeta] resolvedBaseDir:', resolvedBaseDir);
+      console.log('[DEBUG generateFromMeta] resolvedBasePath:', resolvedBasePath);
+      
+      // Comparación case-insensitive en macOS (case-insensitive filesystem)
+      const isSameDir = process.platform === 'darwin'
+        ? resolvedBaseDir.toLowerCase() === resolvedBasePath.toLowerCase()
+        : resolvedBaseDir === resolvedBasePath;
+      console.log('[DEBUG generateFromMeta] son iguales (case-' + (process.platform === 'darwin' ? 'insensitive' : 'sensitive') + '):', isSameDir);
+      
+      if (!isSameDir) {
+        console.log('[DEBUG generateFromMeta] Copiando directorio...');
+        await copyDirSkippingMeta(baseDir, basePath);
+        console.log('[DEBUG generateFromMeta] Eliminando directorio temporal...');
+        await fse.remove(baseDir);
+      } else {
+        console.log('[DEBUG generateFromMeta] Directorios son el mismo, omitiendo copia');
+      }
+      outputs.pagaresPdfPath = path.join(basePath, 'lote', path.basename(lotePath));
+      console.log('[DEBUG generateFromMeta] pagaresPdfPath:', outputs.pagaresPdfPath);
     }
-    outputs.pagaresPdfPath = path.join(basePath, 'lote', path.basename(lotePath));
-  }
 
-  if (docs === 'contrato' || docs === 'ambos') {
-    const { pdfPath } = await generarContrato({ ...data });
-    const contratoDir = path.join(basePath, 'contrato');
-    await fse.ensureDir(contratoDir);
-    const targetPdf = path.join(contratoDir, path.basename(pdfPath));
-    await fse.copy(pdfPath, targetPdf, { overwrite: true });
-    outputs.contratoPdfPath = targetPdf;
-  }
-
-  const updatedMeta = {
-    ...meta,
-    updatedAt: new Date().toISOString(),
-    outputs: {
-      ...meta.outputs,
-      ...outputs
+    if (docs === 'contrato' || docs === 'ambos') {
+      console.log('[DEBUG generateFromMeta] Generando contrato...');
+      const { pdfPath } = await generarContrato({ ...data });
+      console.log('[DEBUG generateFromMeta] pdfPath generado:', pdfPath);
+      const contratoDir = path.join(basePath, 'contrato');
+      console.log('[DEBUG generateFromMeta] contratoDir:', contratoDir);
+      await fse.ensureDir(contratoDir);
+      const targetPdf = path.join(contratoDir, path.basename(pdfPath));
+      console.log('[DEBUG generateFromMeta] targetPdf:', targetPdf);
+      console.log('[DEBUG generateFromMeta] Copiando PDF del contrato...');
+      await fse.copy(pdfPath, targetPdf, { overwrite: true });
+      outputs.contratoPdfPath = targetPdf;
+      console.log('[DEBUG generateFromMeta] contrato copiado exitosamente');
     }
-  };
-  writeJsonAtomic(metaPath, updatedMeta);
 
-  await ensureAuditJson(basePath, updatedMeta, outputs, docs);
+    console.log('[DEBUG generateFromMeta] Actualizando meta.json...');
+    const updatedMeta = {
+      ...meta,
+      updatedAt: new Date().toISOString(),
+      outputs: {
+        ...meta.outputs,
+        ...outputs
+      }
+    };
+    writeJsonAtomic(metaPath, updatedMeta);
+    console.log('[DEBUG generateFromMeta] meta.json actualizado');
 
-  return outputs;
+    console.log('[DEBUG generateFromMeta] Generando audit.json...');
+    await ensureAuditJson(basePath, updatedMeta, outputs, docs);
+    console.log('[DEBUG generateFromMeta] audit.json generado');
+
+    console.log('[DEBUG generateFromMeta] Completado. Outputs:', Object.keys(outputs));
+    return outputs;
+  } catch (err) {
+    console.error('[DEBUG generateFromMeta] ERROR STACK:', err.stack);
+    console.error('[DEBUG generateFromMeta] ERROR MESSAGE:', err.message);
+    throw err;
+  }
 }
 
 module.exports = { generateFromMeta };

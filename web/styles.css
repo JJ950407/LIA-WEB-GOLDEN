@@ -399,3 +399,43 @@ button,
     padding: 22px 20px;
   }
 }
+
+/* ============================================================================
+   BOTÓN DE CERRAR SESIÓN
+   ============================================================================ */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logout-button {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid rgba(91, 107, 98, 0.3);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.logout-button:hover {
+  color: var(--accent-strong);
+  border-color: rgba(30, 124, 83, 0.5);
+  background: rgba(30, 124, 83, 0.05);
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 640px) {
+  .logout-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}

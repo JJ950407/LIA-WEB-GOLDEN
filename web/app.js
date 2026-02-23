@@ -1,3 +1,8 @@
+/**
+ * LIA Pagaré Web - Aplicación Principal
+ * Verificación de autenticación al inicio
+ */
+
 const steps = {
   docs: document.getElementById('step-docs'),
   venta: document.getElementById('step-venta'),
@@ -400,10 +405,37 @@ printPagares.addEventListener('click', () => {
   });
 });
 
-updateAnualidadesVisibility();
-updateLugarPagoVisibility();
-showStep(0);
-renderSummary(buildPayload());
+/**
+ * Inicializa la aplicación después de verificar autenticación
+ */
+(async function initApp() {
+  // Verificar autenticación antes de cargar la aplicación
+  if (!window.LIA_AUTH) {
+    console.error('Sistema de autenticación no disponible');
+    window.location.replace('/login.html');
+    return;
+  }
+
+  const isAuthenticated = await window.LIA_AUTH.requireAuth();
+  if (!isAuthenticated) {
+    // La función requireAuth ya redirige a login si no está autenticado
+    return;
+  }
+
+  // Configurar botón de logout
+  const logoutButton = document.getElementById('logout-button');
+  if (logoutButton) {
+    logoutButton.addEventListener('click', () => {
+      window.LIA_AUTH.logout();
+    });
+  }
+
+  // Inicializar wizard solo después de autenticación exitosa
+  updateAnualidadesVisibility();
+  updateLugarPagoVisibility();
+  showStep(0);
+  renderSummary(buildPayload());
+})();
 
 (function () {
   const overlay = document.getElementById("liaLoaderOverlay");
