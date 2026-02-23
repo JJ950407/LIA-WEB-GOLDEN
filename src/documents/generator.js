@@ -125,7 +125,14 @@ function writePagareAuditJson({
   const finalPath = path.join(outDir, `audit_${safeBase}.json`);
   const tmpPath   = finalPath + '.tmp';
   fs.writeFileSync(tmpPath, JSON.stringify(auditObj, null, 2), 'utf8');
-  fs.renameSync(tmpPath, finalPath);
+  const srcAbs = path.resolve(tmpPath);
+  const dstAbs = path.resolve(finalPath);
+  const same = process.platform === 'darwin'
+    ? srcAbs.toLowerCase() === dstAbs.toLowerCase()
+    : srcAbs === dstAbs;
+  if (!same) {
+    fs.renameSync(tmpPath, finalPath);
+  }
   return { auditPath: finalPath, shortHash };
 }
 
