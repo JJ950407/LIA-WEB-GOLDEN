@@ -4,16 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { parseDateDMYLoose } = require('./src/parsers/date');
 const { generateFromMeta } = require('./src/app/generateFromMeta');
-
-function slugifyWeb(text) {
-  return String(text || '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .toLowerCase()
-    .slice(0, 60);
-}
+const { sanitizeFolderName } = require('./src/utils/sanitizeFolderName');
 
 function ymd(date) {
   const y = date.getFullYear();
@@ -60,7 +51,7 @@ async function run() {
   };
 
   const fechaEmision = parseDateDMYLoose(payload.fechaEmision);
-  const slug = slugifyWeb(payload.deudor);
+  const slug = sanitizeFolderName(payload.deudor);
   const dateISO = ymd(fechaEmision);
 
   const basePathRel = path.join('data', 'clientes', slug, dateISO);

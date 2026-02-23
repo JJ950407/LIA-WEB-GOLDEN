@@ -60,11 +60,13 @@ function getFieldValue(id) {
 
 function updateStepOrder() {
   const tipo = getCheckedValue('tipoDocumento');
+  const oldStepOrder = [...stepOrder];
   if (tipo === 'pagares') {
     stepOrder = ['docs', 'venta', 'cliente', 'resumen'];
   } else {
     stepOrder = ['docs', 'venta', 'cliente', 'predio', 'resumen'];
   }
+  // Log de debug eliminado para producción
 }
 
 function showStep(index) {
@@ -78,8 +80,12 @@ function showStep(index) {
   nextButton.classList.toggle('hidden', currentIndex === stepOrder.length - 1);
 
   const stepNumber = currentIndex + 1;
-  progressLabel.textContent = `Paso ${stepNumber} de ${stepOrder.length}`;
-  progressBar.style.width = `${(stepNumber / stepOrder.length) * 100}%`;
+  if (progressLabel) {
+    progressLabel.textContent = `Paso ${stepNumber} de ${stepOrder.length}`;
+  }
+  if (progressBar) {
+    progressBar.style.width = `${(stepNumber / stepOrder.length) * 100}%`;
+  }
   
   // Actualizar sidebar visual
   updateSidebar();
@@ -169,6 +175,7 @@ function updateLugarPagoVisibility() {
 }
 
 function buildPayload() {
+  
   const anualidades = getCheckedValue('anualidades');
   const regla = getCheckedValue('regla1530');
   const tipoDocumento = getCheckedValue('tipoDocumento');
@@ -176,11 +183,11 @@ function buildPayload() {
   const lugarExpedicion = getFieldValue('lugarExpedicion');
   const engancheRaw = getFieldValue('enganche');
 
-  return {
+  const payload = {
     tipoDocumento,
     fechaEmision: getFieldValue('fechaEmision'),
     total: parseMoney(getFieldValue('total')),
-    enganche: engancheRaw ? engancheRaw : '0',
+    enganche: parseMoney(engancheRaw),
     mensual: parseMoney(getFieldValue('mensual')),
     _tieneAnualidades: anualidades === 'si',
     anualidadMonto: anualidades === 'si' ? parseMoney(getFieldValue('anualidadMonto')) : 0,
@@ -211,13 +218,16 @@ function buildPayload() {
     linderoPoniente: getFieldValue('linderoPoniente'),
     testigos: getFieldValue('testigos')
   };
+  
+  return payload;
 }
 
 function renderSummary(payload) {
   const engancheValue = parseMoney(payload.enganche);
   const saldo = Number(payload.total) - engancheValue;
   const anualTotal = Number(payload.anualidadMonto) * Number(payload.numeroAnualidades || 0);
-  const numeroPagares = payload.mensual ? Math.ceil((saldo - anualTotal) / payload.mensual) : 0;
+  const mensualNum = Number(payload.mensual) || 0;
+  const numeroPagares = mensualNum > 0 ? Math.ceil((saldo - anualTotal) / mensualNum) : 0;
 
   // Mapeo de emojis por tipo de campo
   const getEmoji = (text) => {
@@ -293,16 +303,29 @@ function clearStatus() {
 nextButton.addEventListener('click', () => {
   const stepKey = stepOrder[currentIndex];
   if (!validateStep(stepKey)) return;
+  
+  // IMPORTANTE: Leer datos ANTES de cambiar de paso, mientras todos los campos son visibles
+  const payload = buildPayload();
+  
   if (stepKey === 'docs') updateStepOrder();
   if (stepKey === 'venta') updateAnualidadesVisibility();
   if (stepKey === 'cliente') updateLugarPagoVisibility();
+  
   showStep(currentIndex + 1);
-  renderSummary(buildPayload());
+  
+  // Usar requestAnimationFrame para asegurar que el DOM esté listo para renderizar
+  requestAnimationFrame(() => {
+    renderSummary(payload);
+  });
 });
 
 prevButton.addEventListener('click', () => {
+  // Leer datos antes de cambiar de paso
+  const payload = buildPayload();
   showStep(currentIndex - 1);
-  renderSummary(buildPayload());
+  requestAnimationFrame(() => {
+    renderSummary(payload);
+  });
 });
 
 lugarPagoToggle.addEventListener('change', updateLugarPagoVisibility);
@@ -368,8 +391,11 @@ function resetWizard() {
   statusText.textContent = '';
   
   // Volver al paso 1
+  const payload = buildPayload();
   showStep(0);
-  renderSummary(buildPayload());
+  requestAnimationFrame(() => {
+    renderSummary(payload);
+  });
   
   // Scroll al inicio
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -594,8 +620,12 @@ stepItems.forEach(item => {
         }
       }
       
+      // Leer datos antes de cambiar de paso
+      const payload = buildPayload();
       showStep(targetIndex);
-      renderSummary(buildPayload());
+      requestAnimationFrame(() => {
+        renderSummary(payload);
+      });
       closeSidebar();
     }
   });

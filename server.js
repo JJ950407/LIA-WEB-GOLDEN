@@ -5,6 +5,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const { parseDateDMYLoose } = require('./src/parsers/date');
 const { generateFromMeta } = require('./src/app/generateFromMeta');
+const { sanitizeFolderName } = require('./src/utils/sanitizeFolderName');
 
 dotenv.config();
 
@@ -176,15 +177,9 @@ app.get('/api/auth/verify', (req, res) => {
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'web')));
 
-function slugifyWeb(text) {
-  return String(text || '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .toLowerCase()
-    .slice(0, 60);
-}
+// NOTA: La función slugifyWeb ha sido reemplazada por sanitizeFolderName centralizada
+// ubicada en ./src/utils/sanitizeFolderName.js para garantizar consistencia
+// entre la creación de carpetas y la generación de documentos.
 
 function parseFechaEmision(raw) {
   if (!raw) return new Date();
@@ -227,7 +222,7 @@ app.post('/api/capturas', (req, res) => {
 
     const fechaEmision = parseFechaEmision(payload.fechaEmision || payload.fechaEmisionLote);
     const dateISO = ymd(fechaEmision);
-    const slug = slugifyWeb(payload.deudor || payload.deudorNombreCompleto || 'cliente');
+    const slug = sanitizeFolderName(payload.deudor || payload.deudorNombreCompleto || 'cliente');
 
     const basePathRel = path.join('data', 'clientes', slug, dateISO);
     const basePathAbs = path.resolve(__dirname, basePathRel);

@@ -4,9 +4,11 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const fse = require('fs-extra');
 const { PDFDocument } = require('pdf-lib');
 const Jimp = require('jimp');
 const QrCode = require('qrcode-reader');
+const { sanitizeFolderName } = require('../utils/sanitizeFolderName');
 
 // Rutas base del proyecto
 const SRC_ROOT = path.resolve(__dirname, '..');      // .../src
@@ -35,14 +37,10 @@ const two = (n) => String(n).padStart(2, '0');
 const toCents = (n) => Math.round(Number(n) * 100);
 const fromCents = (c) => Math.round(c) / 100;
 
-function slugify(s) {
-  return String(s)
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '_')
-    .replace(/^_+|_+$/g, '')
-    .toUpperCase()
-    .slice(0, 60);
-}
+// NOTA: La función slugify ha sido reemplazada por sanitizeFolderName centralizada
+// ubicada en ../utils/sanitizeFolderName.js para garantizar consistencia.
+// La función anterior generaba nombres en MAYÚSCULAS con GUIONES BAJOS,
+// mientras que ahora usamos minúsculas con guiones para consistencia con el servidor web.
 
 // Fecha local segura (sin saltos por zona horaria): 'YYYY-MM-DD'
 function ymdLocal(date) {
@@ -301,7 +299,7 @@ async function generarLoteYMeta(d) {
     }
   }
 
-  const clienteSlug = slugify(d.deudor || 'CLIENTE');
+  const clienteSlug = sanitizeFolderName(d.deudor || 'CLIENTE');
   const ventaId = Date.now();
   const ventaFechaDir = ymd(d.fechaEmision);
   const baseDir = path.join(OUTPUT_ROOT, clienteSlug, ventaFechaDir);
@@ -419,6 +417,8 @@ async function generarLoteYMeta(d) {
   }
 
   const lotePathRel = path.join(dirLote, `lote_${ventaId}.pdf`);
+  // Asegurar que el directorio exista antes de escribir el PDF
+  await fse.ensureDir(path.dirname(lotePathRel));
   fs.writeFileSync(lotePathRel, await merger.save());
   // Convert to absolute path so external callers can reliably locate the file
   const lotePath = path.resolve(lotePathRel);
