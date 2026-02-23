@@ -79,7 +79,14 @@ function ymd(date) {
 function writeJsonAtomic(filePath, data) {
   const tmp = `${filePath}.tmp`;
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2));
-  fs.renameSync(tmp, filePath);
+  const srcAbs = path.resolve(tmp);
+  const dstAbs = path.resolve(filePath);
+  const same = process.platform === 'darwin'
+    ? srcAbs.toLowerCase() === dstAbs.toLowerCase()
+    : srcAbs === dstAbs;
+  if (!same) {
+    fs.renameSync(tmp, filePath);
+  }
 }
 
 app.post('/api/capturas', (req, res) => {
